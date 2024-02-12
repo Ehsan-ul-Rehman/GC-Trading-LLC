@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Solway&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo&display=swap">
+    <title>Document</title>
+    <style>
+        .font2 {
+            font-family: 'Protest Riot', sans-serif;
+        }
+
+        .font3 {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .font1 {
+            font-family: 'Solway', serif;
+        }
+
+        .font4 {
+            font-family: 'Cardo', serif;
+            word-spacing: 4px;
+        }
+
+        .hero-sec {
+            background-image: url(./img/homepage-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .aboutus-sec {
+            background-image: url(./img/about-us-page-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .our-vision-sec {
+            background-image: url(./img/our-vision-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .blur-effect {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .shadoww {
+            box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="hero-sec md:pb-16 pb-12" id="hero-sec">
+        <nav class="relative flex justify-between items-center bg-white bg-opacity-50 blur-effect">
+            <a class="text-3xl font-bold leading-none" href="#">
+                <img src="./img/logo.png" alt="Website Logo Here" class="md:h-36 h-20 mx-10">
+            </a>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-[#2DCF33] p-3">
+                    <svg class="block h-8 w-8 fill-current mx-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul
+                class="hidden absolute top-full left-1/2 transform -translate-y-full pb-4 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 xl:space-x-12">
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#hero-sec">HOME</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#aboutus-sec">ABOUT US</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#services-sec">SERVICES</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#our-vision-sec">OUR VISION</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#contactus-sec">CONTACT US</a></li>
+            </ul>
+            <div class="px-8 space-y-2 hidden lg:block">
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-solid fa-phone mr-2"></i>+971 55 415 4677</p>
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-brands fa-whatsapp mr-2"></i>+92 333 422 8855</p>
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-regular fa-envelope mr-2"></i>info@gc-trading.co</p>
+                <div class="flex gap-8 justify-between mb-4">
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-twitter"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-youtube"></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-menu relative z-50 hidden ">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class=" fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-4 justify-end">
+                    <button class="navbar-close">
+                        <svg class="h-10 w-10 text-gray-400 cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col h-full justify-between mb-8">
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#hero-sec">HOME</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#aboutus-sec">ABOUT US</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#services-sec">SERVICES</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#our-vision-sec">OUR VISION</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#contactus-sec">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="space-y-4">
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-solid fa-phone mr-2"></i>+971 55 415 4677</p>
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-brands fa-whatsapp mr-2"></i>+92 333 422 8855</p>
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-regular fa-envelope mr-2"></i>info@gc-trading.co</p>
+                        <div class="flex gap-8 mb-4">
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-facebook"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-instagram"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-twitter"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-youtube"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="md:w-3/4 w-ful mx-8 blur-effect md:px-12 px-4 md:py-12 py-8 md:mx-auto bg-black bg-opacity-50 rounded-lg md:my-16 my-12">
+            <h1 class="text-[#2DCF33] md:text-4xl text-2xl text-center font1 mb-4">YOUR PARTNER TO</h1>
+            <h1 class="text-white md:text-6xl text-3xl font-sans font-bold text-center mb-8">A SUSTAINABLE BUSINESS</h1>
+            <p class="text-white text-lg text-center font4">Green Code Trading GCT has positioned itself
+                to be among the dynamic companies to adapt to ever changing trends in the food and beverages supply and
+                distribution requirements in the gulf market. We are resourced to be your partner in achieving a
+                sustainable and healthier food and beverages supply chain services.</p>
+        </div>
+        <div class="flex justify-center">
+            <a href="#contactus-sec" class="blur-effect rounded-lg text-lg text-black bg-white bg-opacity-50 text-center px-8 py-2 font-semibold flex mx-auto  hover:bg-opacity-100 transition ease-in-out">Get in Touch</a>
+        </div>
+
+    </main>
+
+    <section class="aboutus-sec lg:flex md:p-16 p-8" id="aboutus-sec">
+        <div class="lg:w-1/2">
+            <img src="./img/about-us-image.jpg" alt="" class="w-full rounded-xl shadoww mb-8 lg:mb-0">
+        </div>
+        <div class="lg:w-1/2 lg:pl-12">
+            <h1 class="text-[#2DCF33] md:text-5xl text-4xl font-sans font-bold  mb-8">ABOUT US</h1>
+            <p class="text-black md:text-xl text-lg font-medium">Our distinguished values of business come from our team of expert
+                with over 20 years of experience in the projects management, production and Supply chain & Logistics.
+                Our global network of reliable partners and international trade experience give us a strong position to
+                serve demands of Food & Beverage sector of UAE and other neighbouring regions.<br><br>Our custom-made
+                solutions for F&B market of UAE will not only help the Hospitality businesses, distributors and
+                retailers to manage their operations with ease but will also exceed their customer’s expectations of
+                quality and timelines. Quality, cost effectiveness and sustainability in operations strategy and
+                management are our core values.</p>
+            <div class="flex mt-8 gap-8 ">
+                <a href="#hero-sec"
+                    class="blur-effect rounded-lg text-lg text-[white] bg-black bg-opacity-50 text-center md:px-8 px-4 py-2 font-semibold hover:bg-opacity-75 transition ease-in-out">HOME</a>
+                <a href="#contactus-sec"
+                    class="blur-effect rounded-lg text-lg text-[white] bg-black bg-opacity-50 text-center md:px-8 px-4 py-2 font-semibold hover:bg-opacity-75 transition ease-in-out">CONTACT
+                    US</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-sec md:py-16 p-8 lg:px-32 md:px-16 bg-white" id="services-sec">
+        <h1 class="text-[#2DCF33] md:text-5xl text-4xl font-sans font-bold  mb-8">SERVICES</h1>
+        <p class="text-black md:text-xl text-lg font-medium">Our services include import & export of food & beverage items, fresh &
+            preserved food products and variety of other related commodities are on the list. We can offer customised
+            solutions and services to our valued market partners to secure a win-win position for both the companies. We
+            shall be glad to discuss possibilities and services to add value to your on going business operations or
+            start new ventures.</p>
+        <div class="flex justify-center gap-4 my-8">
+            <hr class="w-1/5 my-6 border border-gray-500 hidden md:block">
+            <h1 class="text-red-500 text-4xl font-thin font3">Innovation is limitless</h1>
+            <hr class="w-1/5 my-6 border border-gray-500 hidden md:block">
+        </div>
+        <div class="md:flex space-y-8 md:space-y-0 gap-2">
+            <div class="w-full">
+                <img src="./img/services-img-1.jpg" alt="" class="w-full rounded-lg shadoww">
+                <p class="text-lg font-medium underline text-black text-center mt-4">IMPORT AND EXPORT</p>
+            </div>
+            <div class="w-full">
+                <img src="./img/services-img-2.jpg" alt="" class="w-full rounded-lg shadoww">
+                <p class="text-lg font-medium underline text-black text-center mt-4">FOOD & BEVERAGES</p>
+            </div>
+            <div class="w-full">
+                <img src="./img/services-img-3.jpg" alt="" class="w-full rounded-lg shadoww">
+                <p class="text-lg font-medium underline text-black text-center mt-4">FRESH AND PRESERVED ITEMS</p>
+            </div>
+            <div class="w-full">
+                <img src="./img/services-img-4.jpg" alt="" class="w-full rounded-lg shadoww">
+                <p class="text-lg font-medium underline text-black text-center mt-4">GRAINS AND CEREALS</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-vision-sec md:py-16 p-8 lg:px-32 md:px-16 md:pb-80" id="our-vision-sec">
+        <h1 class="text-white md:text-5xl text-4xl font-sans text-center font-bold mb-8">OUR VISION</h1>
+        <p class="text-white text-lg font-normal">I am delighted to extend a warm welcome to esteemed partners and
+            stakeholders as the Chief Executive Officer of GREEN CODE TRADING LLC DUBAI, a burgeoning force in the F&B
+            supply and distribution landscape in the UAE. With great excitement and anticipation, I share the vision and
+            mission of our dynamic startup. <br><br> In an era of rapid growth and transformation in the Gulf Region,
+            Dubai stands as a beacon of innovation and opportunity. At GCT, we are driven by the conviction that our
+            startup is poised to play a pivotal role in shaping the future of the Food and Beverage industry in this
+            thriving region and contribute in the vision of its dynamic leaders to a secure, sustainable and healthier
+            food market. <br><br> Our mission is clear – to be the trusted partner of choice for food and beverage
+            establishments across the Gulf. We recognise the unique demands and diverse palates of this vibrant market,
+            and we are committed to delivering unparalleled service, efficiency, and quality to meet and exceed the
+            expectations of our valued clients.</p>
+        </div>
+    </section>
+
+    <section class="conatctus-sec md:flex align-middle" id="contactus-sec">
+        <div class="md:w-1/2 hidden lg:block">
+            <img src="./img/contact-page-image.jpg" alt="" class="w-full h-full">
+        </div>
+        <div class="lg:w-1/2 w-full md:p-12 p-4 md:pb-0 my-auto">
+            <p class="md:text-2xl text-xl text-gray-700 font-semibold mb-8 font2">SUCCESS HAS MANY PERSPECTIVES</p>
+            <h1 class="text-[#2DCF33] md:text-5xl text-4xl font-sans font-bold  md:mb-10 mb-8">SEE YOU SOON</h1>
+
+            <div class="phone-no md:mx-12 mx-4 md:mb-10 mb-8">
+                <h2 class="md:text-xl text-lg font-bold text-black my-4">PHONE NUMBERS</h2>
+                <p class="md:text-xl text-lg font-normal text-gray-700"><i class="fa-solid fa-phone mr-2"></i>+971 55 415 4677</p>
+                <p class="md:text-xl text-lg font-normal text-gray-700 mt-2"><i class="fa-solid fa-phone mr-2"></i>+92 333 422 8855</p>
+            </div>
+
+            <div class="email md:mx-12 mx-4 md:mb-10 mb-8">
+                <h2 class="md:text-xl text-lg font-bold text-black my-4">EMAIL ADDRESS</h2>
+                <p class="md:text-xl text-lg font-normal text-gray-700"><i class="fa-regular fa-envelope mr-2"></i>info@gc-trading.co</p>
+            </div>
+
+            <div class="phone-no md:mx-12 mx-4 md:mb-10 mb-8">
+                <h2 class="md:text-xl text-lg font-bold text-black my-4">OFFICES</h2>
+                <p class="md:text-xl text-lg font-normal text-gray-700"><i class="fa-solid fa-location-dot mr-2"></i>F301, Al
+                    Jazeeri Tamimi Building,Deira, Dubai</p>
+                <p class="md:text-xl text-lg font-normal text-gray-700 mt-2"><i class="fa-solid fa-location-dot mr-2"></i>SIITIS, 30KM,
+                    Multan Road, Lahore, Pakistan</p>
+            </div>
+
+            <h2 class="md:text-xl text-lg font-bold text-black my-4 md:mx-12 mx-4">Taqi ur Rehman, CEO Green Code Trading LLC, Dubai</h2>
+
+            <a href="#hero-sec"
+                class="blur-effect p-4 text-xl bg-black bg-opacity-50 w-min flex ml-auto rounded-lg bottom-4 mb-4 sticky text-white hover:bg-opacity-75 transition ease-in-out"><i
+                    class="fa-solid fa-arrow-up"></i></a>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 md:pt-8 pt-4">
+        <div class="flex gap-8 justify-center mb-4">
+            <button class="text-3xl text-gray-300 hover:text-white transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-facebook"></i></button>
+            <button class="text-3xl text-gray-300 hover:text-white transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-instagram"></i></button>
+            <button class="text-3xl text-gray-300 hover:text-white transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-twitter"></i></button>
+            <button class="text-3xl text-gray-300 hover:text-white transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-youtube"></i></button>
+        </div>
+        <div class="flex md:flex-row flex-col md:gap-12 gap-4 px-8 justify-center">
+            <a href="#hero-sec" class="text-base text-gray-300 hover:text-white font-normal transition ease-in-out" href="#contactus-sec">Home</a>
+            <a href="#aboutus-sec" class="text-base text-gray-300 hover:text-white font-normal transition ease-in-out" href="#contactus-sec">About Us</a>
+            <a href="#services-sec" class="text-base text-gray-300 hover:text-white font-normal transition ease-in-out" href="#contactus-sec">Services</a>
+            <a href="#our-vision-sec" class="text-base text-gray-300 hover:text-white font-normal transition ease-in-out" href="#contactus-sec">Our Vision</a>
+            <a href="#contactus-sec" class="text-base text-gray-300 hover:text-white font-normal transition ease-in-out" href="#contactus-sec">Contact Us</a>
+        </div>
+        <div class="bg-gray-900 md:mt-8 mt-4 p-4">
+            <p class="text-sm text-center text-white"><i class="fa-regular fa-copyright mr-2"></i>2024 Green Code Trading LLC</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+        // Open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (let i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function () {
+                    for (let j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // Close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        function closeMenu() {
+            for (let j = 0; j < menu.length; j++) {
+                menu[j].classList.add('hidden');
+            }
+        }
+
+        if (close.length) {
+            for (let i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', closeMenu);
+            }
+        }
+
+        if (backdrop.length) {
+            for (let i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', closeMenu);
+            }
+        }
+
+        // Close menu when link is clicked
+        const links = document.querySelectorAll('.navbar-menu a');
+
+        if (links.length) {
+            for (let i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', closeMenu);
+            }
+        }
+    });
+</script>
+
+</body>
+
+</html>
