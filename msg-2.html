@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Solway&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo&display=swap">
+    <link rel="icon" href="./img/logo.png">
+    <title>GC Trading LLC</title>
+    <style>
+        .blur-effect {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <main class="hero-sec md:pb-16 pb-12 2xl:h-screen" id="hero-sec">
+        <nav class="relative flex justify-between items-center bg-gray-50 blur-effect">
+            <a class="text-3xl font-bold leading-none" href="#">
+                <img src="./img/logo.png" alt="Website Logo Here" class="md:h-36 h-20 mx-10">
+            </a>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-[#2DCF33] p-3">
+                    <svg class="block h-8 w-8 fill-current mx-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul
+                class="hidden absolute top-full left-1/2 transform -translate-y-full pb-4 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 xl:space-x-12">
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#hero-sec">HOME</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#aboutus-sec">ABOUT US</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#services-sec">SERVICES</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#our-vision-sec">OUR VISION</a></li>
+                <li><a class="text-lg text-gray-600 hover:text-black font-normal transition ease-in-out"
+                        href="#contactus-sec">CONTACT US</a></li>
+            </ul>
+            <div class="px-8 space-y-2 hidden lg:block">
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-solid fa-phone mr-2"></i>+971 55 415 4677</p>
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-brands fa-whatsapp mr-2"></i>+92 333 422 8855</p>
+                <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-regular fa-envelope mr-2"></i>info@gc-trading.co</p>
+                <div class="flex gap-8 justify-between mb-4">
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-twitter"></i></button>
+                    <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-youtube"></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-menu relative z-50 hidden ">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class=" fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-4 justify-end">
+                    <button class="navbar-close">
+                        <svg class="h-10 w-10 text-gray-400 cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col h-full justify-between mb-0">
+                <div class="flex flex-col h-full justify-between">
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#hero-sec">HOME</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#aboutus-sec">ABOUT US</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#services-sec">SERVICES</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#our-vision-sec">OUR VISION</a>
+                        </li>
+                        <hr>
+                        <li class="mb-1">
+                            <a class="block p-4 text-lg font-semibold text-gray-700 hover:bg-green-50 hover:text-black rounded"
+                                href="#contactus-sec">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="space-y-4">
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-solid fa-phone mr-2"></i>+971 55 415 4677</p>
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-brands fa-whatsapp mr-2"></i>+92 333 422 8855</p>
+                        <p class="md:text-xl text-lg font-thin text-gray-700"><i class="fa-regular fa-envelope mr-2"></i>info@gc-trading.co</p>
+                        <div class="flex gap-8 mb-">
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-facebook"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-instagram"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-twitter"></i></button>
+                            <button class="text-xl text-gray-700 hover:text-black transition ease-in-out" href="#contactus-sec"><i class="fa-brands fa-youtube"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <form class="bg-gray-50 blur-effect border-2 my-12 flex flex-col mx-auto border-[#2DCF33] p-6 rounded-xl w-1/4">
+
+            <label for="fullName" class="block mb-1 text-lg text-gray-700">Full Name</label>
+            <input type="text" id="fullName" class="bg-gray-50 border outline-[#2DCF33] border-gray-400 text-black text-sm rounded-lg block w-full p-2 mb-4" placeholder="Your Name">
+    
+            <label for="conpanyName" class="block mb-1 text-lg text-gray-700">Company Name</label>
+            <input type="text" id="conpanyName" class="bg-gray-50 border outline-[#2DCF33] border-gray-400 text-black text-sm rounded-lg block w-full p-2 mb-4" placeholder="Your Comapny Name">
+    
+            <label for="email" class="block mb-1 text-lg text-gray-700">Email Address</label>
+            <input type="email" id="email" class="bg-gray-50 border outline-[#2DCF33] border-gray-400 text-black text-sm rounded-lg block w-full p-2 mb-4"
+                placeholder="name@gmail.com">
+    
+            <label for="message" class="block mb-1 text-lg text-gray-700">Your Message</label>
+            <textarea id="message" rows="4"
+                class="bg-gray-50 block p-2 w-full text-sm text-black outline-[#2DCF33] rounded-lg border border-gray-400 mb-6"
+                placeholder="Type a Message"></textarea>
+            <input type="submit" value="Send Message" class=" text-end blur-effect rounded-lg text-base ml-auto flex text-white bg-black bg-opacity-50 px-4 py-1 hover:bg-opacity-75 transition ease-in-out">
+        </form>
+
+    </main>
+</body>
+</html>
