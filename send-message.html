@@ -27,11 +27,10 @@
             class="blur-effect rounded-lg text-lg text-white bg-black bg-opacity-50 px-4 py-2 hover:bg-opacity-75 transition ease-in-out"><i
                 class="fa-solid fa-angle-left mr-1"></i>Home</a>
     </div>
-    <form onsubmit="sendEmail(); reset(); return false;"
-        class="bg-gray-50 blur-effect border-2 border-[#2DCF33] p-6 rounded-xl w-full md:w-1/3 lg:w-1/4">
+    <form id="myForm" class="bg-gray-50 blur-effect border-2 border-[#2DCF33] p-6 rounded-xl w-full md:w-1/3 lg:w-1/4">
 
-        <label for="fullName" class="block mb-1 text-lg text-gray-700">Full Name</label>
-        <input type="text" id="fullName"
+        <label for="name" class="block mb-1 text-lg text-gray-700">Full Name</label>
+        <input type="text" id="name"
             class="bg-gray-50 border outline-[#2DCF33] border-gray-400 text-black text-sm rounded-lg block w-full p-2 mb-4"
             required placeholder="Your Name">
 
@@ -54,41 +53,59 @@
         <textarea id="message" rows="4"
             class="bg-gray-50 block p-2 w-full text-sm text-black outline-[#2DCF33] rounded-lg border border-gray-400 mb-6"
             required placeholder="Type a Message"></textarea>
-        <input type="submit" value="Send Message"
+        <input type="submit" value="Send Message" onclick="sendEmail()"
             class=" text-end blur-effect rounded-lg text-base ml-auto flex text-white bg-black bg-opacity-50 px-4 py-1 hover:bg-opacity-75 transition ease-in-out">
     </form>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            const name = document.getElementById("fullName").value;
-            const phone = document.getElementById("phoneNo").value;
-            const company = document.getElementById("companyName").value;
-            const message = document.getElementById("message").value;
-
-
-            Email.send({
-                SecureToken: "498945ed-2c50-4afa-b0f3-4fd7696f30d2",
-                To: 'ehsanulrehman6@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "New Contact Form Enquiry",
-                Body: "Full Name: " + name + "<br/> Phone No: " + phone + "<br/> Company Name: " + company + "<br/> Message: " + message,
-            }).then(
-                message => {
-                    console.log(message);
-                    if (message == 'OK') {
-                        alert('Thanks for sending message. We will contact you soon.');
-                    }
-                    else {
-                        console.error(message);
-                        alert('Error submitting form.')
-                    }
-                }
-            ).catch(
-                error => console.error("Error occurred while sending email:", error)
-            );
-        }
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "yDdLI_BIHTqy-YXmm",
+            });
+        })();
+    </script>
+    <!-- <script>
+        function sendEmail() {
+            let parms = {
+                name : document.getElementById("fullName").value,
+                phoneNo : document.getElementById("phoneNo").value,
+                companyName : document.getElementById("companyName").value,
+                email : document.getElementById("email").value,
+                message : document.getElementById("message").value,
+            }
+
+            emailjs.send("service_as9zjml","service_as9zjml".parms).then(alert("Message Sent Successfully!"));            
+            console.log(parms);
+        }
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+    
+                // Capture form values
+                let templateParams = {
+                    name: document.getElementById("name").value,
+                    phoneNo: document.getElementById("phoneNo").value,
+                    companyName: document.getElementById("companyName").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value,
+                };
+    
+                // Send email using EmailJS
+                emailjs.send('service_as9zjml', 'template_ek65hab', templateParams)
+                    .then((response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                    })
+                    .catch((error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
