@@ -27,7 +27,8 @@
             class="blur-effect rounded-lg text-lg text-white bg-black bg-opacity-50 px-4 py-2 hover:bg-opacity-75 transition ease-in-out"><i
                 class="fa-solid fa-angle-left mr-1"></i>Home</a>
     </div>
-    <form onsubmit="sendEmail(); reset(); return false;" class="bg-gray-50 blur-effect border-2 border-[#2DCF33] p-6 rounded-xl w-full md:w-1/3 lg:w-1/4">
+    <form onsubmit="sendEmail(); reset(); return false;"
+        class="bg-gray-50 blur-effect border-2 border-[#2DCF33] p-6 rounded-xl w-full md:w-1/3 lg:w-1/4">
 
         <label for="fullName" class="block mb-1 text-lg text-gray-700">Full Name</label>
         <input type="text" id="fullName"
@@ -35,7 +36,7 @@
             placeholder="Your Name">
 
         <label for="phoneNo" class="block mb-1 text-lg text-gray-700">Phone Number</label>
-        <input type="number" id="phoneNo"
+        <input type="text" id="phoneNo"
             class="bg-gray-50 border outline-[#2DCF33] border-gray-400 text-black text-sm rounded-lg block w-full p-2 mb-4"
             placeholder="You Phone Number">
 
@@ -62,17 +63,43 @@
         function sendEmail() {
             Email.send({
                 Host: "smtp.elasticemail.com",
-                Username: "username",
-                Password: "password",
-                To: 'them@website.com',
-                From: "you@isp.com",
-                Subject: "This is the subject",
+                Username: "ehsanulrehman1@gmail.com",
+                // Password: "140E5711D99F6E59CD64D4451143F3A69BE9",
+                Password: "ehsan&314&cod|000",
+                To: 'ehsanulrehman6@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
                 Body: "And this is the body"
             }).then(
                 message => alert(message)
             );
         }
     </script>
+    <!-- <script>
+        function sendEmail(event) {
+            event.preventDefault()
+            const fullName = document.getElementById("fullName").value;
+            const phoneNo = document.getElementById("phoneNo").value;
+            const conpanyName = document.getElementById("conpanyName").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const recipient = "ehsanulrehman6@gmail.com";
+            const subject = "New Contact Form Enquiry";
+            const body = `Name: ${fullName}\nPhone: ${phoneNo}\nCompany: ${conpanyName}\nEmail: ${email}\nMessage: ${message}`
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "ehsanulrehman1@gmail.com",
+                Password: "140E5711D99F6E59CD64D4451143F3A69BE9",
+                To: recipient,
+                From: email,
+                Subject: subject,
+                Body: body
+            }).then(
+                message => alert(message)
+                    .catch(error => alert(`Error: ${error}`))
+            )}
+    </script> -->
 </body>
 
 </html>
