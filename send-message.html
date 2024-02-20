@@ -61,7 +61,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        // require('dotenv').config(); // Load environment variables from .env file
+        require('dotenv').config();
+        console.log(process.env.EMAILJS_USER_ID); // Check if this logs the expected value
+
 
         (function () {
             emailjs.init({
